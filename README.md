@@ -47,4 +47,4 @@ O projeto utiliza as seguintes tecnologias:
 
 # 3. Estrutura do projeto
 
-![alt text](image4.png)
+![alt text](./imgs/image.png)

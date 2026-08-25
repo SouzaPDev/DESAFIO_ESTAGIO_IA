@@ -1,0 +1,63 @@
+candidato: "Pedro Costa"
+
+modelo_usado: "qwen3:8b"
+
+provedor: "ollama"
+
+horas_dedicadas: 16
+
+nivel_1:
+
+  limpeza_dados:
+    status: completo
+    onde: "nivel_1/nivel_1.ipynb"
+    nota: "Carregamento dos dados, identificação de valores ausentes e duplicidades, remoção de registros duplicados, conversão da coluna de data e conversão dos valores monetários para formato numérico."
+
+  regras_pandas:
+    status: completo
+    onde: "nivel_1/nivel_1.ipynb"
+    nota: "Implementadas as duas regras determinísticas utilizando pandas: fracionamento e valor atípico."
+
+  validacao_regras:
+    status: completo
+    onde: "nivel_1/nivel_1.ipynb"
+    nota: "Foi realizada a validação da Regra 1 utilizando comparação dos casos esperados com os casos identificados."
+
+  saida_estruturada:
+    status: parcial
+    onde: "nivel_1/nivel_1.ipynb"
+    nota: "Foi definida a estrutura do parecer com Pydantic e realizada a integração inicial com o modelo Qwen3 através do Ollama. A validação completa da resposta estruturada ainda está sendo finalizada."
+
+  comparacao_prompts:
+    status: nao_feito
+    plano: "docs/DECISOES.md#prompts"
+
+nivel_2:
+
+  regras_em_escala:
+    status: nao_feito
+    plano: "Reaproveitar o tratamento e as regras determinísticas do Nível 1 sobre dados_nivel_2.json."
+
+  ferramentas:
+    status: nao_feito
+    plano: "Implementar as ferramentas historico_cliente, operacoes_do_dia e perfil_canal em nivel_2/tools.py."
+
+  agente:
+    status: nao_feito
+    plano: "Implementar o agente em nivel_2/agente.py utilizando as ferramentas de consulta da base."
+
+  lote:
+    status: nao_feito
+    plano: "Executar o agente sobre os clientes selecionados e salvar os pareceres estruturados em outputs/."
+
+  confronto:
+    status: nao_feito
+    plano: "Comparar os níveis de risco produzidos pelo agente com os sinais das regras determinísticas e analisar as divergências."
+
+nivel_3:
+
+  trilha_escolhida: "nao_escolhida"
+
+  status: nao_feito
+
+  plano: "Caso haja tempo adicional, implementar uma das trilhas opcionais do Nível 3 e documentar a decisão em docs/DECISOES.md."
